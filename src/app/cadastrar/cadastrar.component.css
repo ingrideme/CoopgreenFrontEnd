@@ -6,6 +6,7 @@
 }
 
 .form-container{
+    width: 355px;
     position: absolute;
     top: 15vh;
     background: #fff;
