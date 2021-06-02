@@ -13,7 +13,7 @@ import { SobreComponent } from './sobre/sobre.component';
 @NgModule({
   declarations: [
     AppComponent,
-    RodapeComponent
+    RodapeComponent,
     CadastrarComponent,
     LoginComponent,
     SobreComponent
