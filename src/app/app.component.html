@@ -7,4 +7,6 @@ faltam: rotas
 <app-cadastrar></app-cadastrar> 
 -->
 
-<router-outlet></router-outlet>
+<router-outlet>
+  <app-menu *ngIf="session.login"></app-menu>
+</router-outlet>
