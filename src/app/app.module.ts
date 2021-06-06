@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { SobrenosComponent } from './sobre/sobrenos/sobrenos.component';
 import { FormsModule } from '@angular/forms';
+import { MenuComponent } from './menu/menu.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     SobreComponent,
     SobrenosComponent
+    MenuComponent
 ],
   imports: [
     BrowserModule,
