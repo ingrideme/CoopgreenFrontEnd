@@ -4,10 +4,18 @@
             <form class="form-container">
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Insira seu CNPJ ou CPF</label>
-                    <input [(ngModel)]="user.cpfOuCnpj" type="email" class="form-control" name="cpfOuCnpj" id="cpfOuCnpj" placeholder="___.___.___-__">
+                    <input [(ngModel)]="user.cpfOuCnpj" type="number" class="form-control" name="cpfOuCnpj" id="cpfOuCnpj" placeholder="___.___.___-__">
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Insira sua senha</label>
+                  <label for="exampleFormControlInput1">Nome</label>
+                  <input [(ngModel)]="user.nomeFisOuJuri" type="text" class="form-control" name="nomeFisOuJuri" id="nomeFisOuJuri" placeholder="Digite seu nome ou Razão Social">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Digite seu E-mail</label>
+                <input [(ngModel)]="user.email" type="text" class="form-control" name="email" id="email" placeholder="seu@email">
+            </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1" >Insira sua senha</label>
                     <input (input)='confirmSenha($event)' type="password" class="form-control"  name="confirmSenha"  id="confirmSenha" placeholder="8 digitos">
                 </div>
                 <div class="form-group">

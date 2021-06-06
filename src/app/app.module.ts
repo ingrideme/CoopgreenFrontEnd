@@ -21,7 +21,7 @@ import { MenuComponent } from './menu/menu.component';
     CadastrarComponent,
     LoginComponent,
     SobreComponent,
-    SobrenosComponent
+    SobrenosComponent,
     MenuComponent
 ],
   imports: [
