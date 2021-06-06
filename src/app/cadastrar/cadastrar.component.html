@@ -4,20 +4,20 @@
             <form class="form-container">
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Insira seu CNPJ ou CPF</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="___.___.___-__">
+                    <input [(ngModel)]="user.cpfOuCnpj" type="email" class="form-control" name="cpfOuCnpj" id="cpfOuCnpj" placeholder="___.___.___-__">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Insira sua senha</label>
-                    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="8 digitos">
+                    <input (input)='confirmSenha($event)' type="password" class="form-control"  name="confirmSenha"  id="confirmSenha" placeholder="8 digitos">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Confirmação de senha</label>
-                    <input type="password" class="form-control" id="exampleFormControlInput1"
+                    <input [(ngModel)]="user.senha" type="password" class="form-control" id="senha" name="senha"
                         placeholder="Insira novamente sua senha">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Tipo de conta</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select (change)='cooperativaCadastro($event)' name="tipoCooperativa" id="tipoCooperativa" class="form-control">
                         <option> </option>
                         <option>Cooperativa</option>
                         <option>Comprador</option>
@@ -26,7 +26,7 @@
                 <div class="form-group ">
                     <label for="exampleFormControlSelect1">Localidade</label>
                     <p></p>
-                    <select class="" id="exampleFormControlSelect1">
+                    <select (change)='localidadeCadastro($event)' class="" id="estadoLocalidade" name="estadoLocalidade">
                         <option>____________________________</option>
                         <option>AC</option>
                         <option>AL</option>
@@ -60,7 +60,7 @@
             <!-- <button type="button" class="btn btn-success btn-block" >Enviar</button> -->
             <div class="d-flex justify-content-center">
                 <button type="submit" class="btn btn-danger mr-4" routerLink='/login'> Cancelar</button>
-                <button type="submit" class="btn btn-success">Cadastrar</button>
+                <button type="submit" class="btn btn-success" (click)='cadastrar()'>Cadastrar</button>
             </div>
             </form>
         </section>
