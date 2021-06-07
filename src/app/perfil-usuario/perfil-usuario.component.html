@@ -1,0 +1,193 @@
+<div class="container mt-5">
+
+
+    <div class="row  d-flex justify-content-center align-items-center">
+<div class="card" style="width: 20rem;">
+  <img class="align-self-center card-img-top mt-3 w-75" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Twinpines.svg/1200px-Twinpines.svg.png" alt="Card image cap">
+  <div class="card-body">
+    <h4 class="titulonome text-center card-text">Nome da cooperativa</h4>
+  </div>
+</div>
+
+<div class="align-middle col-md-4">
+  <ul class="list-group">
+   <button class="botao  btn-grad list-group-item mb-3 text-white" data-toggle="modal" data-target="#novaProduto">Cadastrar produto </button>
+    <button class="botao btn-grad  list-group-item mb-3 text-white" type="button" data-toggle="collapse" data-target="#estoqueProdutos" aria-expanded="false" aria-controls="estoqueProdutos">Estoque</button>
+    <button class="botao btn-grad  list-group-item mb-3 text-white" type="button" data-toggle="collapse" data-target="#historicoVendas" aria-expanded="false" aria-controls="historicoVendas">Histórico de venda</button>
+    <button class="botao btn-grad  list-group-item mb-3 text-white">Vitrine </button>
+  </ul>
+</div>
+</div>
+</div>
+
+
+
+<!-- TABELA DE ESTOQUE -->
+<div class="row d-flex justify-content-center mt-4">
+<div class="col-md-8">
+<div class=" collapse" id="estoqueProdutos">
+  <div class="corpoTabela p-5">
+  <h2 class="titulo text-center">Estoque de produtos</h2>
+  <table class="tabelinha table table-hover">
+
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Produto</th>
+        <th scope="col">Peso</th>
+        <th scope="col">Quantidade</th>
+        <th scope="col">Categoria</th>
+        <th scope="col">Preço</th>
+        <th scope="col">Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Papelão</td>
+        <td>10kg</td>
+        <td>5</td>
+        <td>Papel</td>
+        <td>111</td>
+       <td>
+      <button class="btn button mr-3 text-white">Editar</button>
+      <button class="btn btn-danger">Apagar</button>
+      </td>
+      </tr>
+
+      <tr>
+        <th scope="row">2</th>
+        <td>Plastico</td>
+        <td>10kg</td>
+        <td>5</td>
+        <td>Plastico</td>
+        <td>222</td>
+        <td>
+          <button class="btn button mr-3 text-white">Editar</button>
+          <button class="btn btn-danger">Apagar</button>
+          </td>
+
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+</div>
+</div>
+</div>
+<!-- FIM DA TABELA DE ESTOQUE -->
+
+<!-- INICIO HISTÓRICO DE VENDAS-->
+<div class="row d-flex justify-content-center mt-4">
+<div class="col-md-8">
+  <div class="collapse" id="historicoVendas">
+    <div class="corpoTabela p-5">
+    <h3 class="titulo text-center">Histórico de vendas</h3>
+    <table class="tabelinha table table-hover">
+
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Produto</th>
+          <th scope="col">Peso</th>
+          <th scope="col">Quantidade</th>
+          <th scope="col">Categoria</th>
+          <th scope="col">Preço</th>
+          <th scope="col">Ação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Papelão</td>
+          <td>10kg</td>
+          <td>5</td>
+          <td>Papel</td>
+          <td>111</td>
+         <td>
+        <button class="btn button text-white mr-3">Editar</button>
+        <button class="btn btn-danger">Apagar</button>
+        </td>
+        </tr>
+
+        <tr>
+          <th scope="row">2</th>
+          <td>Plastico</td>
+          <td>10kg</td>
+          <td>5</td>
+          <td>Plastico</td>
+          <td>222</td>
+          <td>
+            <button class="btn button text-white mr-3 ">Editar</button>
+            <button class="btn btn-danger">Apagar</button>
+            </td>
+
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+  </div>
+    </div>
+</div>
+<!--FIM HISTORICO DE VENDAS -->
+
+
+<!-- INICIO DO MODAL DE CADASTRAR PRODUTO -->
+
+<div class="modal fade" id="novaProduto" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Novo Produto</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+            <label for="nomeProduto">Produto:</label>
+            <input type="text" class="form-control" id="produto" placeholder="Nome">
+          </div>
+
+          <div class="form-group">
+              <label for="peso">Peso</label>
+              <input type="text"  class="form-control" id="peso" placeholder="Peso (em kg)">
+            </div>
+
+            <div class="form-group">
+              <label for="qtd">Quantidade</label>
+              <input type="text"  class="form-control" id="qtd" placeholder="Quantidade disponível">
+            </div>
+
+            <div class="form-group">
+              <label for="descricao">Descrição</label>
+                <textarea name="texto" class="form-control" id="descricao" placeholder="Breve descrição"></textarea>
+            </div>
+
+      <div class="form-group">
+        <label for="texto">Categoria do Produto:        </label>
+        <select class="form-control" name="" id="">
+          <option value="">Selecione o tipo</option>
+          <option value="">Papel</option>
+        <option value="">Metal</option>
+        <option value="">Plastico</option>
+        <option value="">Vidro</option>
+
+      </select>
+        </div>
+
+        <div class="form-group">
+          <label for="preco">Preço</label>
+          <input type="text"  class="form-control" id="preco" placeholder="Preço do produto">
+        </div>
+
+     </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light " data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn button text-white">Cadastrar</button>
+      </div>
+    </div>
+  </div>
+  </div>
+<!-- FIM DO MODAL DE CADASTRAR PRODUTO -->
