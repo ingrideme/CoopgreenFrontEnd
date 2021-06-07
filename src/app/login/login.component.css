@@ -1,4 +1,5 @@
 .form-container{
+    width: 355px;
     top: 10vh;
     position: absolute;
     background: #fff;
@@ -12,4 +13,4 @@
         background-size: 300%;
     }
 }
-    
+
