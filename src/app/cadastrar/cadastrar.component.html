@@ -4,20 +4,32 @@
             <form class="form-container">
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Insira seu CNPJ ou CPF</label>
+<<<<<<< HEAD
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+=======
+                    <input [(ngModel)]="user.cpfOuCnpj" type="number" class="form-control" name="cpfOuCnpj" id="cpfOuCnpj" placeholder="___.___.___-__">
+>>>>>>> 458d5e78287ef271533b4153eb95f382e5ef5b39
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Insira sua senha</label>
-                    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="8 digitos">
+                  <label for="exampleFormControlInput1">Nome</label>
+                  <input [(ngModel)]="user.nomeFisOuJuri" type="text" class="form-control" name="nomeFisOuJuri" id="nomeFisOuJuri" placeholder="Digite seu nome ou Razão Social">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Digite seu E-mail</label>
+                <input [(ngModel)]="user.email" type="text" class="form-control" name="email" id="email" placeholder="seu@email">
+            </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1" >Insira sua senha</label>
+                    <input (input)='confirmSenha($event)' type="password" class="form-control"  name="confirmSenha"  id="confirmSenha" placeholder="8 digitos">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Confirmação de senha</label>
-                    <input type="password" class="form-control" id="exampleFormControlInput1"
+                    <input [(ngModel)]="user.senha" type="password" class="form-control" id="senha" name="senha"
                         placeholder="Insira novamente sua senha">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Tipo de conta</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select (change)='cooperativaCadastro($event)' name="tipoCooperativa" id="tipoCooperativa" class="form-control">
                         <option> </option>
                         <option>Cooperativa</option>
                         <option>Comprador</option>
@@ -25,8 +37,14 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Localidade</label>
+<<<<<<< HEAD
                     <select class="form-control" id="exampleFormControlSelect1">
                         <option></option>
+=======
+                    <p></p>
+                    <select (change)='localidadeCadastro($event)' class="" id="estadoLocalidade" name="estadoLocalidade">
+                        <option>____________________________</option>
+>>>>>>> 458d5e78287ef271533b4153eb95f382e5ef5b39
                         <option>AC</option>
                         <option>AL</option>
                         <option>AP</option>
@@ -57,8 +75,13 @@
                     </select>
                 </div>
             <div class="d-flex justify-content-center">
+<<<<<<< HEAD
                 <button type="submit" class="btn btn-light mr-4" routerLink='/login'> Cancelar</button>
                 <button type="submit" class="btn btn-success" style="background-color: #2d6a4f">Cadastrar</button>
+=======
+                <button type="submit" class="btn btn-danger mr-4" routerLink='/login'> Cancelar</button>
+                <button type="submit" class="btn btn-success" (click)='cadastrar()'>Cadastrar</button>
+>>>>>>> 458d5e78287ef271533b4153eb95f382e5ef5b39
             </div>
             </form>
         </section>
