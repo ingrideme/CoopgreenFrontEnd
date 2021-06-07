@@ -4,11 +4,7 @@
             <form class="form-container">
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Insira seu CNPJ ou CPF</label>
-<<<<<<< HEAD
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-=======
-                    <input [(ngModel)]="user.cpfOuCnpj" type="number" class="form-control" name="cpfOuCnpj" id="cpfOuCnpj" placeholder="___.___.___-__">
->>>>>>> 458d5e78287ef271533b4153eb95f382e5ef5b39
                 </div>
                 <div class="form-group">
                   <label for="exampleFormControlInput1">Nome</label>
@@ -37,14 +33,8 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Localidade</label>
-<<<<<<< HEAD
                     <select class="form-control" id="exampleFormControlSelect1">
                         <option></option>
-=======
-                    <p></p>
-                    <select (change)='localidadeCadastro($event)' class="" id="estadoLocalidade" name="estadoLocalidade">
-                        <option>____________________________</option>
->>>>>>> 458d5e78287ef271533b4153eb95f382e5ef5b39
                         <option>AC</option>
                         <option>AL</option>
                         <option>AP</option>
@@ -75,13 +65,8 @@
                     </select>
                 </div>
             <div class="d-flex justify-content-center">
-<<<<<<< HEAD
                 <button type="submit" class="btn btn-light mr-4" routerLink='/login'> Cancelar</button>
                 <button type="submit" class="btn btn-success" style="background-color: #2d6a4f">Cadastrar</button>
-=======
-                <button type="submit" class="btn btn-danger mr-4" routerLink='/login'> Cancelar</button>
-                <button type="submit" class="btn btn-success" (click)='cadastrar()'>Cadastrar</button>
->>>>>>> 458d5e78287ef271533b4153eb95f382e5ef5b39
             </div>
             </form>
         </section>
