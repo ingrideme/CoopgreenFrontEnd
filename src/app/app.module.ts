@@ -12,6 +12,7 @@ import { SobreComponent } from './sobre/sobre.component';
 import { SobrenosComponent } from './sobre/sobrenos/sobrenos.component';
 import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
+import { VitrineComponent } from './vitrine/vitrine.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { MenuComponent } from './menu/menu.component';
     LoginComponent,
     SobreComponent,
     SobrenosComponent,
-    MenuComponent
+    MenuComponent,
+    VitrineComponent
 ],
   imports: [
     BrowserModule,
