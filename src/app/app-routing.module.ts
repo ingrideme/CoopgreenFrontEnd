@@ -9,10 +9,12 @@ const routes: Routes = [
 
   {path:'', redirectTo:'login', pathMatch:'full'},
 
+  {path: 'perfil', component: PerfilUsuarioComponent },
+
+
   {path:'login', component: LoginComponent},
   {path:'cadastrar', component:CadastrarComponent},
 
-  {path: 'perfil', component: PerfilUsuarioComponent },
 ];
 
 @NgModule({

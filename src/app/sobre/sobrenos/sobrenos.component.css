@@ -7,14 +7,16 @@
     background-size: cover;
 }
 
+h3 {
+  color: #40916C;
+}
+
+
 h1 {
   color: #1B4332;
     letter-spacing: 4px;
 }
 
-h3 {
-  color: #40916C;
-}
 
 .portaretrato {
   width: 350px;
