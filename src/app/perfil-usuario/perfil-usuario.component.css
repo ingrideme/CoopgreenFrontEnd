@@ -1,0 +1,58 @@
+#bg {
+  background-color: #DAD7CD;
+  background-size: 100vh;
+}
+
+.button {
+  background-color: #2d6a4f;
+
+}
+
+.botao {
+  background-color: #40916C;
+}
+
+.texto {
+  font-size: 12pt;
+  color: white;
+  }
+
+.titulo {
+  color: #2D6A4F
+}
+
+
+.btn-grad {background-image: linear-gradient(to right, #2d6a4f 0%, #40916C  51%, #000000  100%)}
+.btn-grad {
+
+  font-size: 15pt;
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+.tabelinha{
+  background-color: #fff;
+}
+
+ .titulonome {
+  color: #1b4332
+ }
+
+ .corpoTabela {
+  background-color: #ffffff;
+   background-image: linear-gradient(180deg, #ffffff 0%, #b7e4c7 50%);
+
+  }
