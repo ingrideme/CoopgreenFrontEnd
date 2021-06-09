@@ -14,9 +14,9 @@
               </div>
 
                 <div class="form-group">
-                  <label for="exampleInputEmail1">CPF/CNPJ:</label>
-                  <input [(ngModel)]="userLogin.cpfOuCnpj" name="cpfOuCnpj" id="cpfOuCnpj" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu CPF/CNPJ">
-                  <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu CPF/CNPJ, com ninguém.</small>
+                  <label for="inputCpf">CPF/CNPJ:</label>
+                  <input [(ngModel)]="userLogin.cpfOuCnpj" name="cpfOuCnpj" id="cpfOuCnpj" type="text" class="form-control" id="inputcpfOuCnpj" aria-describedby="cpfOuCnpjlHelp" placeholder="Seu CPF/CNPJ">
+                  <small id="emailcpfOuCnpj" class="form-text text-muted">Nunca vamos compartilhar seu CPF/CNPJ, com ninguém.</small>
                 </div>
                 <div class="form-group">
                   <label  for="exampleInputPassword1">Senha:</label>
@@ -25,7 +25,8 @@
 
 
 
-                <button type="button" (click)="entrar()" class="btn btn-primary btn-block">Enviar</button>
+                <button type="button" (click)="entrar()" class="btn btn-primary btn-block"
+                style="background-color: #2d6a4f" >Enviar</button>
                 <hr class="mt-5 mb-5">
 
                 <div class="form-group">
