@@ -1,0 +1,32 @@
+<div class="menu">
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">Coopgreen</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link"> Inicio <span class="sr-only">(página atual)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink='/sobre' >Sobre nós</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink='/sobrenos'>Sobre o projeto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contato</a>
+        </li>
+      </ul>
+
+     <ul class="navbar-nav ml-auto d-flex align-items-center">
+        <li class="nav-item">
+            <a class="nav-link" (click)="logof()" href="#">Sair <i class="far fa-sign-out-alt"></i></a>
+          </li>
+     </ul>
+
+    </div>
+  </nav>
+</div>

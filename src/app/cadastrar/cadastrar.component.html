@@ -1,33 +1,40 @@
 <div class="container-fluid bg">
     <section class="row justify-content-center">
-        <section class="col-12 col-sm-6 col-md-3">
+        <section class="col-12 col-sm- col-md-3">
             <form class="form-container">
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Insira seu CNPJ</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="___.___.___-__">
+                    <label for="exampleFormControlInput1">Insira seu CNPJ ou CPF</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Insira sua senha</label>
-                    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="8 digitos">
+                  <label for="exampleFormControlInput1">Nome</label>
+                  <input [(ngModel)]="user.nomeFisOuJuri" type="text" class="form-control" name="nomeFisOuJuri" id="nomeFisOuJuri" placeholder="Digite seu nome ou Razão Social">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Digite seu E-mail</label>
+                <input [(ngModel)]="user.email" type="text" class="form-control" name="email" id="email" placeholder="seu@email">
+            </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1" >Insira sua senha</label>
+                    <input (input)='confirmSenha($event)' type="password" class="form-control"  name="confirmSenha"  id="confirmSenha" placeholder="8 digitos">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Confirmação de senha</label>
-                    <input type="password" class="form-control" id="exampleFormControlInput1"
+                    <input [(ngModel)]="user.senha" type="password" class="form-control" id="senha" name="senha"
                         placeholder="Insira novamente sua senha">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Tipo de conta</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select (change)='cooperativaCadastro($event)' name="tipoCooperativa" id="tipoCooperativa" class="form-control">
                         <option> </option>
                         <option>Cooperativa</option>
                         <option>Comprador</option>
                     </select>
                 </div>
-                <div class="form-group ">
+                <div class="form-group">
                     <label for="exampleFormControlSelect1">Localidade</label>
-                    <p></p>
-                    <select class="" id="exampleFormControlSelect1">
-                        <option>____________________________</option>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option></option>
                         <option>AC</option>
                         <option>AL</option>
                         <option>AP</option>
@@ -57,7 +64,10 @@
                         <option>TO</option>
                     </select>
                 </div>
-                <button type="button" class="btn btn-success btn-block">Enviar</button>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-light mr-4" routerLink='/login'> Cancelar</button>
+                <button type="submit" class="btn btn-success" style="background-color: #2d6a4f" (click)="cadastrar()">Cadastrar</button>
+            </div>
             </form>
         </section>
     </section>
