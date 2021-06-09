@@ -29,8 +29,7 @@ export class LoginComponent implements OnInit {
 
           environment.token = this.userLogin.token
 
-          this.router.navigate(['/cadastrar'])
-          alert('Logou!')
+          this.router.navigate(['/perfil'])
         }, erro => {
           if(erro.status == 500)
           {
