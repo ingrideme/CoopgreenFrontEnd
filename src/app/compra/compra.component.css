@@ -1,0 +1,18 @@
+.carousel-control-prev-icon {
+    background-image: url("https://i.ibb.co/8YghK9t/previous.png");
+    height: 80px;
+    width: 80px;
+}
+
+.carousel-control-next-icon {
+    background-image: url("https://i.ibb.co/RcnpGJh/next.png");
+    height: 80px;
+    width: 80px;
+    
+}
+
+img{
+    height: 500px;
+    width: 400px;
+    border-radius: 10px;
+}
