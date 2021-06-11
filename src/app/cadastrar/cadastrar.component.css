@@ -8,7 +8,7 @@
 .form-container{
     width: 355px;
     position: absolute;
-    top: 15vh;
+    top: 5vh;
     background: #fff;
     padding: 30px;
     border-radius: 10px;
@@ -17,4 +17,10 @@
 
 .bot :hover{
  color: #000;
+}
+
+@media only screen and (max-width: 678px){
+  .bg{
+      background-size: 300%;
+  }
 }

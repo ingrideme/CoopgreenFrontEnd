@@ -14,6 +14,10 @@ import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
 import { CompraComponent } from './compra/compra.component';
 
+import { VitrineComponent } from './vitrine/vitrine.component';
+import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
+
+
 
 @NgModule({
   declarations: [
@@ -24,7 +28,10 @@ import { CompraComponent } from './compra/compra.component';
     SobreComponent,
     SobrenosComponent,
     MenuComponent,
-    CompraComponent
+   componentCadastrar,
+   CompraComponent
+
+
 ],
   imports: [
     BrowserModule,
