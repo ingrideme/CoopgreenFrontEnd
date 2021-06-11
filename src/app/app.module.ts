@@ -12,6 +12,7 @@ import { SobreComponent } from './sobre/sobre.component';
 import { SobrenosComponent } from './sobre/sobrenos/sobrenos.component';
 import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
+import { CompraComponent } from './compra/compra.component';
 
 import { VitrineComponent } from './vitrine/vitrine.component';
 import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
@@ -27,8 +28,9 @@ import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.componen
     SobreComponent,
     SobrenosComponent,
     MenuComponent,
-    VitrineComponent,
-    PerfilUsuarioComponent
+   componentCadastrar,
+   CompraComponent
+
 
 ],
   imports: [
