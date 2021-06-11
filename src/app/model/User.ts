@@ -1,12 +1,14 @@
+import { Produto } from './Produto';
+
 export class User {
     public id: number;
     public nomeFisOuJuri: string;
     public email: string;
     public cpfOuCnpj: string;
-   // public data: Date conferir formato data
+    public data: Date
     public cooperativa: string;
     public localidade: string;
     public senha: string;
-    //após criação models produtos criar os relacionamentos
+    public produto: Produto[]
 
 }

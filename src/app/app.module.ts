@@ -27,8 +27,7 @@ import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.componen
     SobreComponent,
     SobrenosComponent,
     MenuComponent,
-    VitrineComponent
-
+    VitrineComponent,
     PerfilUsuarioComponent
 
 ],
