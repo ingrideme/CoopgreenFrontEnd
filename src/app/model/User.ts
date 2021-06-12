@@ -1,4 +1,4 @@
-import { Produto } from './Produto';
+import { Produtos } from './Produtos';
 
 export class User {
     public id: number;
@@ -9,6 +9,6 @@ export class User {
     public cooperativa: string;
     public localidade: string;
     public senha: string;
-    public produto: Produto[]
+    public produtos: Produtos[]
 
 }
