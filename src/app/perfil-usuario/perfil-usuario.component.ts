@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Produto } from './../model/Produto';
 import { User } from './../model/User';
 import { Router } from '@angular/router';
-import { ProdutoService } from './../service/produto.service';
+import { ProdutoService } from '../service/produtos.service';
 import { AuthService } from './../service/auth.service';
 import { environment } from './../../environments/environment.prod';
+import { Produtos } from '../model/Produtos';
 
 @Component({
   selector: 'app-perfil-usuario',
@@ -13,13 +13,13 @@ import { environment } from './../../environments/environment.prod';
 })
 export class PerfilUsuarioComponent implements OnInit {
   categoriaTela: string
-  produto: Produto= new Produto()
-  listaProduto: Produto[]
+  produto: Produtos= new Produtos()
+  listaProduto: Produtos[]
+  
   user: User = new User()
-
   idUser = environment.id
   token = environment.token
-  nomeCooperativa = environment.nomeFisouJuri
+  nomeCooperativa = environment.nomeFisOuJuri
 
   constructor(
     private router : Router,
@@ -48,14 +48,16 @@ export class PerfilUsuarioComponent implements OnInit {
   }
 
   cadastrar(){
-    this.user.id = this.idUser
-    this.produto.usuarioCriador = this.user
+    this.user.id = environment.id
+    this.produto.usuarios = this.user
     this.produto.tipo = this.categoriaTela
+    console.log(this.produto)
 
-    this.produtoService.postProduto(this.produto).subscribe((resp:Produto)=>{
+    this.produtoService.postProduto(this.produto).subscribe((resp:Produtos)=>{
       this.produto = resp
+      
       alert('produto cadastrado com sucesso!')
-      this.produto = new Produto
+      this.produto = new Produtos
     })
 }
 

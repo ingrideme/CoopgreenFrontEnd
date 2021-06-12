@@ -15,6 +15,7 @@ import { MenuComponent } from './menu/menu.component';
 
 import { VitrineComponent } from './vitrine/vitrine.component';
 import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 
@@ -37,7 +38,10 @@ import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.componen
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy ,
+    useClass: HashLocationStrategy
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

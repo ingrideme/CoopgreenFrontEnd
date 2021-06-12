@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { SessionService } from './session.service';
+import { AuthService } from './service/auth.service';
+
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { SessionService } from './session.service';
 export class AppComponent {
   title = 'coopgreen';
 
-  constructor(  public session: SessionService) {
+  constructor( public auth:AuthService) {
     
    }
 }

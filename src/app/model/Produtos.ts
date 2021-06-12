@@ -1,6 +1,6 @@
 import { User } from "./User"
 
-export class Produto{
+export class Produtos{
      public id: number
      public data:Date
      public fotoProduto: string
@@ -9,7 +9,7 @@ export class Produto{
      public preco: number
      public tipo: string
      public quantidade: number
-     public usuarioCriador: User
+     public usuarios: User
      public descricao:string
 
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { SessionService } from '../session.service';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
+
 
 @Component({
   selector: 'app-menu',
@@ -8,13 +10,19 @@ import { SessionService } from '../session.service';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(public session: SessionService) { }
+  nomeFisOuJuri = environment.nomeFisOuJuri
+  
+  constructor(private router:Router) { }
 
-  logof(){
-    this.session.login = false
-  }
 
   ngOnInit(): void {
   }
+
+  sair(){
+    this.router.navigate(['/login'])
+    environment.token=''
+    environment.nomeFisOuJuri=''
+    environment.id=0
+ }
 
 }

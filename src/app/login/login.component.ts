@@ -28,7 +28,9 @@ export class LoginComponent implements OnInit {
           this.userLogin = resp
 
           environment.token = this.userLogin.token
+          environment.id = this.userLogin.id
 
+          console.log(environment)
           this.router.navigate(['/perfil'])
         }, erro => {
           if(erro.status == 500)
