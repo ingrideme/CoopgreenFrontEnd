@@ -17,6 +17,7 @@ import { CompraComponent } from './compra/compra.component';
 import { VitrineComponent } from './vitrine/vitrine.component';
 import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { PerfilEditProdutoComponent } from './perfil-usuario/perfil-edit-produto/perfil-edit-produto.component';
 
 
 
@@ -31,7 +32,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     MenuComponent,
    VitrineComponent,
    CompraComponent,
-   PerfilUsuarioComponent
+   PerfilUsuarioComponent,
+   PerfilEditProdutoComponent
 
 
 ],

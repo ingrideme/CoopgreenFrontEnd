@@ -17,6 +17,10 @@ h1 {
     letter-spacing: 4px;
 }
 
+.icon {
+  fill: #ffffff;
+
+}
 
 .portaretrato {
   width: 350px;

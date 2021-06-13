@@ -74,6 +74,9 @@ export class PerfilUsuarioComponent implements OnInit {
     })
 }
 
+  atualizar(){
+
+  }
 
 }
 
