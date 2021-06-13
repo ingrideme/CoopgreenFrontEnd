@@ -3,7 +3,7 @@
 }
 
 #bg {
-    background-color: #fff;
+    background-color: #DAD7CD;
     background-size: cover;
 }
 
@@ -40,7 +40,7 @@ h3 {
 .img-absolute {
     position: absolute;
     z-index: 1;
-    left: 15%;
+    left: 10%;
     top: 8%;
     background-color: white;
     padding: 40px;

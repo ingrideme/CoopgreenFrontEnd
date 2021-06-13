@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { VitrineComponent } from './vitrine/vitrine.component';
+import { SobrenosComponent } from './sobre/sobrenos/sobrenos.component';
 
 
 const routes: Routes = [
@@ -14,13 +15,14 @@ const routes: Routes = [
   {path:'login', component: LoginComponent},
   {path:'cadastrar', component:CadastrarComponent},
   {path:'vitrine', component:VitrineComponent} ,
-  {path:'sobre', component:SobreComponent}
-  
+  {path:'sobre', component:SobreComponent},
+  {path: 'sobrenos', component: SobrenosComponent}
+
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+exports: [RouterModule]
 })
 export class AppRoutingModule { }
 

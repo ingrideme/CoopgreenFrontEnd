@@ -17,7 +17,7 @@
    <button class="botao  btn-grad list-group-item mb-3 text-white" data-toggle="modal" data-target="#novaProduto">Cadastrar produto </button>
     <button class="botao btn-grad  list-group-item mb-3 text-white" type="button" data-toggle="collapse" data-target="#estoqueProdutos" aria-expanded="false" aria-controls="estoqueProdutos">Estoque</button>
     <button class="botao btn-grad  list-group-item mb-3 text-white" type="button" data-toggle="collapse" data-target="#historicoVendas" aria-expanded="false" aria-controls="historicoVendas">Histórico de venda</button>
-    <button class="botao btn-grad  list-group-item mb-3 text-white">Vitrine </button>
+    <button class="botao btn-grad  list-group-item mb-3 text-white" routerLink='vitrine'>Vitrine </button>
   </ul>
 </div>
 </div>
@@ -34,7 +34,7 @@
   <table class="tabelinha table table-hover">
 
     <thead>
-      <tr>
+      <tr >
         <th scope="col">ID</th>
         <th scope="col">Produto</th>
         <th scope="col">Peso</th>
@@ -45,34 +45,20 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr *ngFor='let produtos of listaProduto'>
         <th scope="row"></th>
-        <td>Papelão</td>
-        <td>10kg</td>
-        <td>5</td>
-        <td>Papel</td>
-        <td>111</td>
+        <td>{{produtos.id}}</td>
+        <td>{{produtos.nomeProduto}}</td>
+        <td>{{produtos.peso}}</td>
+        <td>{{produtos.quantidade}}</td>
+        <td>{{produtos.preco}}</td>
        <td>
       <button class="btn button mr-3 text-white">Editar</button>
       <button class="btn btn-danger">Apagar</button>
       </td>
       </tr>
 
-      <tr>
-        <th scope="row">2</th>
-        <td>Plastico</td>
-        <td>10kg</td>
-        <td>5</td>
-        <td>Plastico</td>
-        <td>222</td>
-        <td>
-          <button class="btn button mr-3 text-white">Editar</button>
-          <button class="btn btn-danger">Apagar</button>
-          </td>
-
-      </tr>
-
-    </tbody>
+      </tbody>
   </table>
 </div>
 </div>
@@ -200,4 +186,6 @@
   </div>
 <!-- FIM DO MODAL DE CADASTRAR PRODUTO -->
 
-</div>
+
+<!--VITRINE USER LOGADO-->
+  </div>

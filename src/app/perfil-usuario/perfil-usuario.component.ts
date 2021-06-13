@@ -15,7 +15,7 @@ export class PerfilUsuarioComponent implements OnInit {
   categoriaTela: string
   produto: Produtos= new Produtos()
   listaProduto: Produtos[]
-  
+
   user: User = new User()
   idUser = environment.id
   token = environment.token
@@ -34,14 +34,27 @@ export class PerfilUsuarioComponent implements OnInit {
       this.router.navigate(['/entrar'])
       alert('Sua sessão expirou,faça o login novamente')
     }
-
+    this.findAllProdutos();
   }
+
+  findAllProdutos() {
+    this.produtoService.getAllProdutos().subscribe((resp: Produtos[]) => {
+      this.listaProduto = resp
+      console.log(resp)
+    }, err => {
+      console.log(this.listaProduto)
+    })
+  }
+
 
   findByIdUser(){
     this.authService.getByIdUser(this.idUser).subscribe((resp:User)=>{
       this.user= resp
       })
     }
+
+
+
 
   categoriaTipo(event: any){
     this.categoriaTela = event.target.value
@@ -55,7 +68,7 @@ export class PerfilUsuarioComponent implements OnInit {
 
     this.produtoService.postProduto(this.produto).subscribe((resp:Produtos)=>{
       this.produto = resp
-      
+
       alert('produto cadastrado com sucesso!')
       this.produto = new Produtos
     })

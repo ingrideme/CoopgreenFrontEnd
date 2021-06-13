@@ -29,8 +29,9 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     SobreComponent,
     SobrenosComponent,
     MenuComponent,
-   componentCadastrar,
-   CompraComponent
+   VitrineComponent,
+   CompraComponent,
+   PerfilUsuarioComponent
 
 
 ],
