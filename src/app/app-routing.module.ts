@@ -18,6 +18,7 @@ const routes: Routes = [
   {path:'sobre', component:SobreComponent},
   {path: 'sobrenos', component: SobrenosComponent}
 
+
 ];
 
 @NgModule({
