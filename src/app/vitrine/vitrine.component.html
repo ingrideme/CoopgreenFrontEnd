@@ -36,63 +36,22 @@
     <hr class="mb-5" />
 
     <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
-      <div class="col">
-        <div class="card h-100 shadow-sm"> <img src="https://img.kalunga.com.br/FotosdeProdutos/145081d.jpg"
-            class="card-img-top" alt="...">
-          <div class="label-top shadow-sm">Papelão</div>
+
+      <div class="col" *ngFor="let item of listaProdutos">
+        <div class="card h-100 shadow-sm">
+          <img src="{{item.fotoProduto}}" class="card-img-top" alt="imagem do produto">
+          <div class="label-top shadow-sm">{{item.tipo}}</div>
           <!---->
           <div class="card-body">
             <div class="clearfix mb-3 "> <span class="float-end"><a href="#"
-                  class="small text-muted mr-2">Preço</a></span><span
-                class="float-start badge rounded-pill bg-success">R$ 00.50 </span> </div>
-            <h5 class="card-title">Descrição que vai ser inserida na hora de cadastrar o produto</h5>
-            <div class="text-center my-4"> <a href="#" class="btn btn-warning">Ver Produtos</a> </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100 shadow-sm"> <img src="https://img.kalunga.com.br/FotosdeProdutos/145081d.jpg"
-            class="card-img-top" alt="...">
-          <div class="label-top shadow-sm">Papelão</div>
-          <!---->
-          <div class="card-body">
-            <div class="clearfix mb-3 "> <span class="float-end"><a href="#"
-                  class="small text-muted mr-2">Preço</a></span><span
-                class="float-start badge rounded-pill bg-success">R$ 00.50 </span> </div>
-            <h5 class="card-title">Descrição que vai ser inserida na hora de cadastrar o produto</h5>
+                  class="small text-muted mr-2">Preço</a></span>
+                  <span class="float-start badge rounded-pill bg-success">R$ {{item.preco}}</span> </div>
+            <h5 class="card-title">{{item.descricao}}</h5>
             <div class="text-center my-4"> <a href="#" class="btn btn-warning">Ver Produtos</a> </div>
           </div>
         </div>
       </div>
 
-      <div class="col">
-        <div class="card h-100 shadow-sm"> <img src="https://img.kalunga.com.br/FotosdeProdutos/145081d.jpg"
-            class="card-img-top" alt="...">
-          <div class="label-top shadow-sm">Papelão</div>
-          <!---->
-          <div class="card-body">
-            <div class="clearfix mb-3 "> <span class="float-end"><a href="#"
-                  class="small text-muted mr-2">Preço</a></span><span
-                class="float-start badge rounded-pill bg-success">R$ 00.50 </span> </div>
-            <h5 class="card-title">Descrição que vai ser inserida na hora de cadastrar o produto</h5>
-            <div class="text-center my-4"> <a href="#" class="btn btn-warning">Ver Produtos</a> </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100 shadow-sm"> <img src="https://img.kalunga.com.br/FotosdeProdutos/145081d.jpg"
-            class="card-img-top" alt="...">
-          <div class="label-top shadow-sm">Papelão</div>
-          <!---->
-          <div class="card-body">
-            <div class="clearfix mb-3 "> <span class="float-end"><a href="#"
-                  class="small text-muted mr-2">Preço</a></span><span
-                class="float-start badge rounded-pill bg-success">R$ 00.50 </span> </div>
-            <h5 class="card-title">Descrição que vai ser inserida na hora de cadastrar o produto</h5>
-            <div class="text-center my-4"> <a href="#" class="btn btn-warning">Ver Produtos</a> </div>
-          </div>
-        </div>
-      </div>
 
     </div>
   </div>
