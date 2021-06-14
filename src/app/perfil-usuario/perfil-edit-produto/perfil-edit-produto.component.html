@@ -1,1 +1,61 @@
-<p>perfil-edit-produto works!</p>
+<div class class="container-fluid" id="bg">
+
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Atualizar Produto</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+            <label for="nomeProduto">Produto:</label>
+            <input [(ngModel)]="produto.nomeProduto" type="text" class="form-control" name="nomeProduto" id="nomeProduto" placeholder="Nome">
+          </div>
+
+          <div class="form-group">
+              <label for="peso">Peso</label>
+              <input  [(ngModel)]="produto.peso" type="text"  class="form-control" name="peso"  id="peso" placeholder="Peso (em kg)">
+            </div>
+
+            <div class="form-group">
+              <label for="qtd">Link imagem do produto</label>
+              <input  [(ngModel)]="produto.fotoProduto"  type="text"  class="form-control" name="fotoProduto" id="fotoProduto" placeholder="Imagem do produto">
+            </div>
+
+            <div class="form-group">
+              <label for="quantidade">Quantidade</label>
+              <input  [(ngModel)]="produto.quantidade" type="text"  class="form-control" name="quantidade" id="quantidade" placeholder="Quantidade disponível">
+            </div>
+
+            <div class="form-group">
+              <label for="descricao">Descrição</label>
+                <textarea  [(ngModel)]="produto.descricao" name="descricao" class="form-control" id="descricao" placeholder="Breve descrição"></textarea>
+            </div>
+
+      <div class="form-group">
+        <label for="texto">Categoria do Produto:        </label>
+        <select (change)='categoriaTipo($event)' name='categoriaTela' id='categoriaTela'>
+          <option value="-">Selecione o tipo</option>
+          <option value="papel">Papel</option>
+        <option value="metal">Metal</option>
+        <option value="plastico">Plastico</option>
+        <option value="vidro">Vidro</option>
+        <option value="outros">Outros</option>
+      </select>
+        </div>
+
+        <div class="form-group">
+          <label for="preco">Preço</label>
+          <input [(ngModel)]="produto.preco" type="text"  class="form-control"  name="preco" id="preco" placeholder="Preço do produto">
+        </div>
+
+     </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light " routerLink='/perfil' data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn button text-white" (click)='atualizar()'>Cadastrar</button>
+      </div>
+    </div>
+   </div>
+</div>

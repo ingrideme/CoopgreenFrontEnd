@@ -10,6 +10,6 @@ export class Produtos{
      public tipo: string
      public quantidade: number
      public usuarios: User
-     public descricao:string
+     public descricao: string
 
 }

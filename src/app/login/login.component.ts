@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
 
           environment.token = this.userLogin.token
           environment.id = this.userLogin.id
+          environment.nomeFisOuJuri = this.userLogin.nomeFisOuJuri
 
           console.log(environment)
           this.router.navigate(['/perfil'])

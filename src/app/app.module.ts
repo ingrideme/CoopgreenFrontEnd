@@ -18,6 +18,7 @@ import { VitrineComponent } from './vitrine/vitrine.component';
 import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { PerfilEditProdutoComponent } from './perfil-usuario/perfil-edit-produto/perfil-edit-produto.component';
+import { PerfilDeleteProdutoComponent } from './perfil-usuario/perfil-delete-produto/perfil-delete-produto.component';
 
 
 
@@ -33,7 +34,8 @@ import { PerfilEditProdutoComponent } from './perfil-usuario/perfil-edit-produto
    VitrineComponent,
    CompraComponent,
    PerfilUsuarioComponent,
-   PerfilEditProdutoComponent
+   PerfilEditProdutoComponent,
+   PerfilDeleteProdutoComponent
 
 
 ],

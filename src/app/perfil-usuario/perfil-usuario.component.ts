@@ -5,6 +5,7 @@ import { ProdutoService } from '../service/produtos.service';
 import { AuthService } from './../service/auth.service';
 import { environment } from './../../environments/environment.prod';
 import { Produtos } from '../model/Produtos';
+import { Route } from '@angular/compiler/src/core';
 
 @Component({
   selector: 'app-perfil-usuario',
@@ -24,7 +25,7 @@ export class PerfilUsuarioComponent implements OnInit {
   constructor(
     private router : Router,
     private produtoService:ProdutoService,
-    private authService: AuthService
+    private authService: AuthService,
   ) { }
 
 
@@ -74,9 +75,8 @@ export class PerfilUsuarioComponent implements OnInit {
     })
 }
 
-  atualizar(){
-
-  }
 
 }
+
+
 
