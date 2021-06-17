@@ -1,7 +1,7 @@
 #bg {
   background-color: #DAD7CD;
   background-size: 100vh;
-
+  min-height: 80vh;
 }
 
 .button {
@@ -22,8 +22,15 @@
   color: #2D6A4F
 }
 
+.card.style {
+  display: unset;
+  flex-direction: unset;
+  padding: 50px;
+  background-color: #ffffffdc;
+  border-radius: 3rem;
+}
 
-.btn-grad {background-image: linear-gradient(to right, #2d6a4f 0%, #40916C  51%, #000000  100%)}
+.btn-grad {background-image: linear-gradient(to right, #2d6a4f 0%, #40916C  51%, #DAD7CD  90%)}
 .btn-grad {
 
   font-size: 15pt;

@@ -1,4 +1,4 @@
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleControls" class="bg carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img class="d-block w-100" src="https://i.ibb.co/RvMxrtY/1.png" alt="Logo da empresa">
@@ -30,7 +30,7 @@
 
 
 
-  <div class="container-fluid bg-trasparent " style="position: relative;">
+  <div class="container-fluid pb-5" style="position: relative;">
     <hr class="mt-5 justify-content-center">
     <h1 text-center>Produtos em Destaque</h1>
     <hr class="mb-5" />
@@ -45,9 +45,9 @@
           <div class="card-body">
             <div class="clearfix mb-3 "> <span class="float-end"><a href="#"
                   class="small text-muted mr-2">Preço</a></span>
-                  <span class="float-start badge rounded-pill bg-success">R$ {{item.preco}}</span> </div>
+                  <span class="float-start badge rounded-pill">R$ {{item.preco}}</span> </div>
             <h5 class="card-title">{{item.descricao}}</h5>
-            <div class="text-center my-4"> <a href="#" class="btn btn-warning">Ver Produtos</a> </div>
+            <div class="text-center my-4"> <a [routerLink]="['/produto-detalhes', item.id]" class="btn btn-warning">Ver Produto</a> </div>
           </div>
         </div>
       </div>

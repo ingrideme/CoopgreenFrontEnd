@@ -5,6 +5,7 @@ export class User {
     public nomeFisOuJuri: string;
     public email: string;
     public cpfOuCnpj: string;
+    public fotoUser: string;
     public data: Date
     public cooperativa: string;
     public localidade: string;

@@ -14,6 +14,10 @@
                 <label for="exampleFormControlInput1">Digite seu E-mail</label>
                 <input [(ngModel)]="user.email" type="text" class="form-control" name="email" id="email" placeholder="seu@email">
             </div>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Insira um link de imagem para avatar</label>
+              <input [(ngModel)]="user.fotoUser" type="text" class="form-control" name="fotoUser" id="fotoUser" placeholder="link">
+          </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1" >Insira sua senha</label>
                     <input (input)='confirmSenha($event)' type="password" class="form-control"  name="confirmSenha"  id="confirmSenha" placeholder="8 digitos">

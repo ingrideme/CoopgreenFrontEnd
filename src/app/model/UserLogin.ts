@@ -7,4 +7,6 @@ export class UserLogin {
     public localidade: string;
     public senha: string;
     public token: string;
+    public fotoUser: string;
+
 }

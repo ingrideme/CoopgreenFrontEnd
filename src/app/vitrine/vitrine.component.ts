@@ -12,6 +12,7 @@ import { ProdutoService } from '../service/produtos.service';
 export class VitrineComponent implements OnInit {
 
   listaProdutos: Produtos[]
+  produto: Produtos = new Produtos()
 
   constructor(
     private router: Router,
@@ -22,6 +23,7 @@ export class VitrineComponent implements OnInit {
     if(environment.token ==''){
        this.router.navigate([('/login')])
     }
+
     this.getAllProdutos()
   }
 
@@ -30,6 +32,14 @@ export class VitrineComponent implements OnInit {
       this.listaProdutos = resp
     })
   }
+
+
+
+findByIdProduto(id: number){
+  this.produtoService.getByIdProdutos(id).subscribe((resp: Produtos) => {
+    this.produto = resp
+  })
+}
 
 
 }

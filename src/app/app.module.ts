@@ -36,8 +36,6 @@ import { PerfilDeleteProdutoComponent } from './perfil-usuario/perfil-delete-pro
    PerfilUsuarioComponent,
    PerfilEditProdutoComponent,
    PerfilDeleteProdutoComponent
-
-
 ],
   imports: [
     BrowserModule,

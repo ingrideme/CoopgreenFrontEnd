@@ -2,7 +2,7 @@ export const environment = {
   production: true,
   token:'',
   nomeFisOuJuri:'',
-  id:0,
-
+  fotoUser: '',
+  id:0
 };
 

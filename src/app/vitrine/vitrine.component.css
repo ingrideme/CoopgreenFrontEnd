@@ -1,3 +1,7 @@
+.bg {
+  background-color: #DAD7CD;
+  background-size: 100vh;
+}
 
 .container-fluid {
   max-width: 1200px
@@ -42,8 +46,8 @@
 
 .label-top {
   position: absolute;
-  background-color: #dad7cd;
-  color: #fff;
+  background-color: #fff;
+  color: #344e41;
   top: 8px;
   right: 8px;
   padding: 5px 10px 5px 10px;

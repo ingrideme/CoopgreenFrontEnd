@@ -193,7 +193,7 @@ ol, li {
   top: 50%;
   left: 50%;
   transform: translate3d(-50%,-40%,70px);
-  color: #fff;
+  color: #3A5A40;
   font-size: 2em;
 }
 
@@ -228,7 +228,7 @@ ol, li {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #333;
+  background-color: #3A5A40;
   background-clip: content-box;
   border: 0.25rem solid transparent;
   border-radius: 50%;
@@ -265,7 +265,7 @@ ol, li {
 .carousel::after {
   content: '';
   z-index: 1;
-  background-color: rgba(51, 22, 22, 0.575);
+  background-color: #3A5A40;
   background-size: 1.5rem 1.5rem;
   background-repeat: no-repeat;
   background-position: center center;

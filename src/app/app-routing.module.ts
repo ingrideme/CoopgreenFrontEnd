@@ -8,6 +8,7 @@ import { VitrineComponent } from './vitrine/vitrine.component';
 import { SobrenosComponent } from './sobre/sobrenos/sobrenos.component';
 import { PerfilEditProdutoComponent } from './perfil-usuario/perfil-edit-produto/perfil-edit-produto.component';
 import { PerfilDeleteProdutoComponent } from './perfil-usuario/perfil-delete-produto/perfil-delete-produto.component';
+import { CompraComponent } from './compra/compra.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,8 @@ const routes: Routes = [
   {path:'login', component: LoginComponent},
   {path:'cadastrar', component:CadastrarComponent},
   {path:'vitrine', component:VitrineComponent} ,
+
+  {path: 'produto-detalhes/:id', component:CompraComponent },
 
   {path:'sobre', component:SobreComponent},
   {path: 'sobrenos', component: SobrenosComponent},
@@ -27,7 +30,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
- exports: [RouterModule]
+   exports: [RouterModule]
 })
 export class AppRoutingModule { }
 

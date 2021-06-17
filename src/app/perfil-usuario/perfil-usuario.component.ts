@@ -3,9 +3,8 @@ import { User } from './../model/User';
 import { Router } from '@angular/router';
 import { ProdutoService } from '../service/produtos.service';
 import { AuthService } from './../service/auth.service';
-import { environment } from './../../environments/environment.prod';
 import { Produtos } from '../model/Produtos';
-import { Route } from '@angular/compiler/src/core';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-perfil-usuario',
@@ -15,12 +14,14 @@ import { Route } from '@angular/compiler/src/core';
 export class PerfilUsuarioComponent implements OnInit {
   categoriaTela: string
   produto: Produtos= new Produtos()
-  listaProduto: Produtos[]
+  produtos: Produtos[]
 
   user: User = new User()
   idUser = environment.id
   token = environment.token
   nomeCooperativa = environment.nomeFisOuJuri
+  fotoTela = environment.fotoUser
+
 
   constructor(
     private router : Router,
@@ -40,10 +41,10 @@ export class PerfilUsuarioComponent implements OnInit {
 
   findAllProdutos() {
     this.produtoService.getAllProdutos().subscribe((resp: Produtos[]) => {
-      this.listaProduto = resp
+      this.produtos = resp
       console.log(resp)
     }, err => {
-      console.log(this.listaProduto)
+      console.log(this.produtos)
     })
   }
 

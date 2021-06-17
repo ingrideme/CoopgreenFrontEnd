@@ -23,7 +23,8 @@
 }
 
 
-.btn-grad {background-image: linear-gradient(to right, #2d6a4f 0%, #40916C  51%, #000000  100%)}
+
+.btn-grad {background-image: linear-gradient(to right, #2d6a4f 0%, #40916C  51%, #DAD7CD  100%)}
 .btn-grad {
 
   font-size: 15pt;

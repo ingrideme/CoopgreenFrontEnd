@@ -2,9 +2,9 @@
 <div class="container pt-5 pb-5">
 
 
-    <div class="row  d-flex justify-content-center align-items-center">
+    <div class="row  d-flex justify-content-center align-items-center card style">
 <div class="card" style="width: 20rem;">
-  <img class="align-self-center card-img-top mt-3 w-75" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Twinpines.svg/1200px-Twinpines.svg.png" alt="Card image cap">
+  <img class="align-self-center card-img-top mt-3 w-75" src="{{fotoTela}}" alt="Card image cap">
   <div class="card-body">
     <h4 class="titulonome text-center card-text">
       {{nomeCooperativa}}
@@ -45,7 +45,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor='let produtos of listaProduto'>
+      <tr *ngFor='let produtos of produtos'>
         <td>{{produtos.id}}</td>
         <td>{{produtos.nomeProduto}}</td>
         <td>{{produtos.peso}}</td>
@@ -88,29 +88,6 @@
       </thead>
       <tbody>
         <tr>
-          <th scope="row">1</th>
-          <td>Papelão</td>
-          <td>10kg</td>
-          <td>5</td>
-          <td>Papel</td>
-          <td>111</td>
-         <td>
-        <button class="btn button text-white mr-3">Editar</button>
-        <button class="btn btn-danger">Apagar</button>
-        </td>
-        </tr>
-
-        <tr>
-          <th scope="row">2</th>
-          <td>Plastico</td>
-          <td>10kg</td>
-          <td>5</td>
-          <td>Plastico</td>
-          <td>222</td>
-          <td>
-            <button class="btn button text-white mr-3 ">Editar</button>
-            <button class="btn btn-danger">Apagar</button>
-            </td>
 
         </tr>
 
