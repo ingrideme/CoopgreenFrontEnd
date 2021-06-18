@@ -4,6 +4,7 @@ import { ActivatedRoute, Router,  } from '@angular/router';
 import { AuthService } from './../../service/auth.service';
 import { environment } from './../../../environments/environment.prod';
 import { Produtos } from './../../model/Produtos';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-perfil-edit-produto',
@@ -46,7 +47,12 @@ categoriaTipo(event: any){
 atualizar(){
   this.produtoService.putProduto(this.produto).subscribe((resp: Produtos)=>{
     this.produto = resp
-    alert('Produto atualizado com sucesso!')
+    Swal.fire({
+      icon: 'success',
+      text: 'Produto atualizado com sucesso!',
+      confirmButtonColor: '#2d6a4f'
+
+    })
     this.router.navigate(['/perfil'])
   })
 }

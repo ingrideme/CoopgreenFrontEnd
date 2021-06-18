@@ -4,6 +4,7 @@ import { AuthService } from '../service/auth.service';
 import { ProdutoService } from '../service/produtos.service';
 import { Produtos } from './../model/Produtos';
 import { environment } from 'src/environments/environment.prod';
+import Swal  from 'sweetalert2';
 
 @Component({
   selector: 'app-compra',
@@ -37,9 +38,14 @@ export class CompraComponent implements OnInit {
     })
   }
 
+
   compra(){
-    alert('Compra finalizada!')
-  }
+    Swal.fire({
+      icon: 'success',
+      text: 'Compra finalizada!',
+      confirmButtonColor: '#2d6a4f'
+
+    })}
 
 }
 

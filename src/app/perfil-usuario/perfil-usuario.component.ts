@@ -5,6 +5,7 @@ import { ProdutoService } from '../service/produtos.service';
 import { AuthService } from './../service/auth.service';
 import { Produtos } from '../model/Produtos';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-perfil-usuario',
@@ -33,8 +34,13 @@ export class PerfilUsuarioComponent implements OnInit {
   ngOnInit(){
     window.scroll(0,0)
     if (environment.token == '') {
-      this.router.navigate(['/entrar'])
-      alert('Sua sessão expirou,faça o login novamente')
+      Swal.fire({
+        icon: 'warning',
+        text: 'Sua sessão expirou. Por favor, faça login novamente.',
+        confirmButtonColor: '#2d6a4f'
+      })
+      this.router.navigate(['/login'])
+
     }
     this.findAllProdutos();
   }
@@ -71,7 +77,11 @@ export class PerfilUsuarioComponent implements OnInit {
     this.produtoService.postProduto(this.produto).subscribe((resp:Produtos)=>{
       this.produto = resp
 
-      alert('produto cadastrado com sucesso!')
+      Swal.fire({
+        icon: 'success',
+        text: 'Produto cadastrado com sucesso!',
+        confirmButtonColor: '#2d6a4f'
+      })
       this.produto = new Produtos
     })
 }

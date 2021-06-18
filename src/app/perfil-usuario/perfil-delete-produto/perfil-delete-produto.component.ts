@@ -3,6 +3,7 @@ import { Produtos } from './../../model/Produtos';
 import { ProdutoService } from './../../service/produtos.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { environment } from './../../../environments/environment.prod';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-perfil-delete-produto',
@@ -38,7 +39,12 @@ findByIdProduto(id: number){
 
 apagar(){
   this.produtoService.deleteProduto(this.idProduto).subscribe(()=> {
-    alert("Produto deletado com sucesso!")
+    Swal.fire({
+      icon: 'success',
+      text: 'Produto deletado com sucesso!',
+      confirmButtonColor: '#2d6a4f'
+
+    })
     this.router.navigate(['/perfil'])
   })
 }
