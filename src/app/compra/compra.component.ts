@@ -45,7 +45,8 @@ export class CompraComponent implements OnInit {
       text: 'Compra finalizada!',
       confirmButtonColor: '#2d6a4f'
 
-    })}
+    })
+  }
 
 }
 

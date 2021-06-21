@@ -4,7 +4,7 @@
 
     <div class="row  d-flex justify-content-center align-items-center card style">
 <div class="card" style="width: 20rem;">
-  <img class="align-self-center card-img-top mt-3 w-75" src="{{fotoTela}}" alt="Card image cap">
+  <img class="align-self-center card-img-top mt-3 w-75" src="{{fotoTela}}" alt="foto avatar do usuario">
   <div class="card-body">
     <h4 class="titulonome text-center card-text">
       {{nomeCooperativa}}
@@ -52,6 +52,8 @@
         <td>{{produtos.peso}}</td>
         <td>{{produtos.tipo}}</td>
         <td>{{produtos.preco}}</td>
+        <!-- <td>{{produtos.usuarios| json }}</td> -->
+
 
         <td class="d-flex justify-content-center">
           <button class="btn button mr-3 text-white" [routerLink]="['/produto-edit', produtos.id]" >Editar</button>
@@ -77,11 +79,9 @@
 
       <thead>
         <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Produto</th>
-          <th scope="col">Peso</th>
-          <th scope="col">Quantidade</th>
-          <th scope="col">Categoria</th>
+          <th scope="col">ID Pedido</th>
+          <th scope="col">Localidade Comprador</th>
+          <th scope="col">Peso Total</th>
           <th scope="col">Preço</th>
           <th scope="col">Ação</th>
         </tr>

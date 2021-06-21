@@ -120,3 +120,17 @@ span {
 .product-price-btn button:hover {
   background-color: #588157;
 }
+
+@media (max-width: 480px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: unset;
+    height: unset;
+  }
+  .product-img,
+  .img-size {
+    width: 290px !important;
+    height: 250px !important;
+  }
+}
