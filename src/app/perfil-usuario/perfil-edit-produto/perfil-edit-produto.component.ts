@@ -15,6 +15,7 @@ export class PerfilEditProdutoComponent implements OnInit {
 
   produto: Produtos = new Produtos()
   categoriaTela: string
+  produtos: Produtos[]
 
   constructor(
     private produtoService: ProdutoService,
@@ -27,10 +28,20 @@ export class PerfilEditProdutoComponent implements OnInit {
  ngOnInit() {
   if(environment.token == ''){
     this.router.navigate(['/entrar'])
+    this.findAllProdutos();
   }
 
   let id = this.route.snapshot.params['id']
   this.findByIdProduto(id)
+}
+
+findAllProdutos() {
+  this.produtoService.getAllProdutos().subscribe((resp: Produtos[]) => {
+    this.produtos = resp
+    console.log(resp)
+  }, err => {
+    console.log(this.produtos)
+  })
 }
 
 findByIdProduto(id: number){
@@ -51,9 +62,9 @@ atualizar(){
       icon: 'success',
       text: 'Produto atualizado com sucesso!',
       confirmButtonColor: '#2d6a4f'
-
     })
     this.router.navigate(['/perfil'])
+    this.findAllProdutos();
   })
 }
 

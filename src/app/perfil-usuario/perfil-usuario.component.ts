@@ -83,6 +83,7 @@ export class PerfilUsuarioComponent implements OnInit {
         confirmButtonColor: '#2d6a4f'
       })
       this.produto = new Produtos
+      this.findAllProdutos();
     })
 }
 
