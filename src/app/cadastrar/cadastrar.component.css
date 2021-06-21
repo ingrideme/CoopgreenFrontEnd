@@ -3,6 +3,7 @@
     width: 100%;
     height: 100vh;
     background-size: 100%;
+    background-size: cover;
 }
 
 .form-container{
@@ -22,5 +23,14 @@
 @media only screen and (max-width: 678px){
   .bg{
       background-size: 300%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    width: 290px;
+  }
+  .form-group {
+    width: 200px;
   }
 }

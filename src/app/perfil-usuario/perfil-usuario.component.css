@@ -65,4 +65,14 @@
 
   }
 
-
+  @media (max-width: 480px) {
+    .btn-grad {
+      font-size: 11pt;
+      padding: 15px 12px;
+      margin: 0px;
+      margin-top: 2px;
+    }
+    .card {
+      margin-bottom: 10px;
+    }
+  }
